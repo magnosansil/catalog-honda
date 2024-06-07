@@ -1,0 +1,115 @@
+header {
+  background-color: var(--background-header);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .seller-logo {
+      width: 10%;
+    }
+
+    button.btn {
+      position: relative;
+      background-color: transparent;
+      width: 35px;
+      height: 16px;
+      border-radius: 8px;
+      box-shadow: rgba(51, 51, 51, 0.1) 0px 32px 64px 0px;
+      overflow: hidden;
+      border: none;
+      margin: 0;
+      padding: 0;
+
+      &:focus, &:active {
+        outline: none;
+        border: none;
+      }
+
+      .ripple.ripple--dark {
+        z-index: 1;
+        transition: .6s ease;
+        transform: scale(3);
+      }
+
+      .ripple.ripple--light {
+        z-index: 2;
+        transform: scale(1);
+        transition: z-index 0s .6s ease, transform 0s ease;
+      }
+
+      &.btn--checked {
+        background-color: var(--dark-gray);
+        animation: changeColor .6s ease forwards;
+
+        @keyframes changeColor {
+          80% {
+            background-color: var(--dark-gray);
+            transform: scale(1); 
+          }
+          80.01% {
+            background-color: var(--white);
+            transform: scale(1); 
+          }
+          100% {
+            background-color: var(--white);
+            transform: scale(1); 
+          }
+        }
+
+        .ripple.ripple--dark {
+          z-index: 2;
+          transform: scale(1);
+          transition: z-index 0s .6s ease, transform 0s ease;
+        }
+
+        .ripple.ripple--light {
+          z-index: 1;
+          transition: .6s ease;
+          transform: scale(3);
+        }
+      }
+
+      .toggle {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 0;
+        border-radius: 50%;
+        z-index: 5;
+
+        &.toggle--dark {
+          background-color: var(--dark-gray);
+          left: 19px;
+        }
+
+        &.toggle--light {
+          background-color: var(--white);
+          right: 19px;
+        }
+      }
+
+      .ripple {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 0;
+        border-radius: 50%;
+
+        &.ripple--dark {
+          background-color: var(--dark-gray);
+          left: 19px;
+        }
+
+        &.ripple--light {
+          background-color: var(--white);
+          right: 19px;
+        }
+      }
+    }
+  }
+}
