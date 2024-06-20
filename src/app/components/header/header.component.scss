@@ -10,16 +10,16 @@ header {
     align-items: center;
 
     .seller-logo {
-      width: 10%;
+      flex-basis: 30%;
+      max-width: 250px;
     }
 
     button.btn {
       position: relative;
       background-color: transparent;
-      width: 35px;
-      height: 16px;
-      border-radius: 8px;
-      box-shadow: rgba(51, 51, 51, 0.1) 0px 32px 64px 0px;
+      width: 52px;
+      height: 26px;
+      border-radius: 13px;
       overflow: hidden;
       border: none;
       margin: 0;
@@ -33,13 +33,13 @@ header {
       .ripple.ripple--dark {
         z-index: 1;
         transition: .6s ease;
-        transform: scale(3);
+        transform: scale(4.8);
       }
 
       .ripple.ripple--light {
         z-index: 2;
         transform: scale(1);
-        transition: z-index 0s .6s ease, transform 0s ease;
+        transition: z-index 0s ease, transform .6s ease;
       }
 
       &.btn--checked {
@@ -49,65 +49,62 @@ header {
         @keyframes changeColor {
           80% {
             background-color: var(--dark-gray);
-            transform: scale(1); 
           }
           80.01% {
             background-color: var(--white);
-            transform: scale(1); 
           }
           100% {
             background-color: var(--white);
-            transform: scale(1); 
           }
         }
 
         .ripple.ripple--dark {
           z-index: 2;
           transform: scale(1);
-          transition: z-index 0s .6s ease, transform 0s ease;
+          transition: z-index 0s ease, transform 0s ease;
         }
 
         .ripple.ripple--light {
           z-index: 1;
           transition: .6s ease;
-          transform: scale(3);
+          transform: scale(4.8);
         }
       }
 
       .toggle {
-        width: 16px;
-        height: 16px;
+        width: 16.5px;
+        height: 16.5px;
         position: absolute;
-        top: 0;
+        top: 4.75px;
         border-radius: 50%;
         z-index: 5;
 
         &.toggle--dark {
           background-color: var(--dark-gray);
-          left: 19px;
+          left: 4.75px;
         }
 
         &.toggle--light {
           background-color: var(--white);
-          right: 19px;
+          right: 4.75px;
         }
       }
 
       .ripple {
-        width: 16px;
-        height: 16px;
+        width: 16.5px;
+        height: 16.5px;
         position: absolute;
-        top: 0;
+        top: 4.75px;
         border-radius: 50%;
 
         &.ripple--dark {
           background-color: var(--dark-gray);
-          left: 19px;
+          left: 4.75px;
         }
 
         &.ripple--light {
           background-color: var(--white);
-          right: 19px;
+          right: 4.75px;
         }
       }
     }
