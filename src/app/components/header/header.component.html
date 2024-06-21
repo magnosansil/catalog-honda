@@ -1,10 +1,55 @@
 <header>
   <nav class="wrapper">
-    <div class="seller-logo" [innerHTML]="svgContent"></div>
+    <div class="left-side">
+      <div class="seller-logo" [innerHTML]="svgLogo"></div>
+      <div class="left-side__icons">
+        <div class="whatsapp icon">
+          <a
+            href="https://api.whatsapp.com/send?phone={{
+              seller.phone
+            }}&text=Olá, vi seu site e estou interessado em uma moto!"
+          >
+            <svg
+              height="682pt"
+              viewBox="-23 -21 682 682.66669"
+              width="682pt"
+              xmlns="http://www.w3.org/2000/svg"
+              id="fi_1384023"
+              [innerHTML]="whatsappLogo"
+            ></svg>
+
+            <div class="contact">
+              <span class="phone-number">
+                {{ seller.formattedPhone }}
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <div class="instagram icon">
+          <a [href]="seller.instagramLink">
+            <svg
+              height="512pt"
+              viewBox="0 0 512 512"
+              width="512pt"
+              xmlns="http://www.w3.org/2000/svg"
+              id="fi_1419647"
+              [innerHTML]="instagramLogo"
+            ></svg>
+
+            <div class="contact">
+              <span class="instagram-nick">
+                {{ seller.instagram }}
+              </span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
     <button class="btn" #btn (click)="toggleClass()">
       <div class="ripple ripple--dark"></div>
       <div class="ripple ripple--light"></div>
-      
+
       <div class="toggle toggle--dark"></div>
       <div class="toggle toggle--light"></div>
     </button>
