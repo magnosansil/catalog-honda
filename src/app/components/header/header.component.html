@@ -1,7 +1,7 @@
 <header>
   <nav class="wrapper">
     <div class="left-side">
-      <div class="seller-logo" [innerHTML]="svgLogo"></div>
+      <a href="/" class="seller-logo" [innerHTML]="svgLogo"></a>
       <div class="left-side__icons">
         <div class="whatsapp icon">
           <a
@@ -46,12 +46,15 @@
         </div>
       </div>
     </div>
-    <button class="btn" #btn (click)="toggleClass()">
-      <div class="ripple ripple--dark"></div>
-      <div class="ripple ripple--light"></div>
-
-      <div class="toggle toggle--dark"></div>
-      <div class="toggle toggle--light"></div>
-    </button>
+    <div class="right-side">
+      <a href="/" class="about-button">Sobre</a>
+      <button class="btn" #btn (click)="toggleClass()">
+        <div class="ripple ripple--dark"></div>
+        <div class="ripple ripple--light"></div>
+  
+        <div class="toggle toggle--dark"></div>
+        <div class="toggle toggle--light"></div>
+      </button>
+    </div>
   </nav>
 </header>

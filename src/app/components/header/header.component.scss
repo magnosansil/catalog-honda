@@ -18,7 +18,7 @@ header {
       display: flex;
       align-items: center;
       flex-basis: 100%;
-      gap: 15px;
+      gap: 25px;
 
       .left-side__icons {
         .icon {
@@ -31,13 +31,13 @@ header {
           a {
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 4px;
             font-size: 12px;
           }
-    
+
           svg {
             fill: var(--primary-color);
-            max-width: 20px;
+            max-width: 18px;
           }
         }
       }
@@ -47,98 +47,104 @@ header {
       }
     }
 
-    button.btn {
-      position: relative;
-      background-color: transparent;
-      width: 52px;
-      height: 26px;
-      border-radius: 13px;
-      overflow: hidden;
-      border: none;
-      margin: 0;
-      padding: 0;
+    .right-side {
+      display: flex;
+      align-items: center;
+      gap: 25px;
 
-      &:focus,
-      &:active {
-        outline: none;
+      button.btn {
+        position: relative;
+        background-color: transparent;
+        width: 52px;
+        height: 26px;
+        border-radius: 13px;
+        overflow: hidden;
         border: none;
-      }
+        margin: 0;
+        padding: 0;
 
-      .ripple.ripple--dark {
-        z-index: 1;
-        transition: 0.6s ease;
-        transform: scale(4.8);
-      }
-
-      .ripple.ripple--light {
-        z-index: 2;
-        transform: scale(1);
-        transition: z-index 0s ease, transform 0.6s ease;
-      }
-
-      &.btn--checked {
-        background-color: var(--dark-gray);
-        animation: changeColor 0.6s ease forwards;
-
-        @keyframes changeColor {
-          80% {
-            background-color: var(--dark-gray);
-          }
-          80.01% {
-            background-color: var(--white);
-          }
-          100% {
-            background-color: var(--white);
-          }
+        &:focus,
+        &:active {
+          outline: none;
+          border: none;
         }
 
         .ripple.ripple--dark {
-          z-index: 2;
-          transform: scale(1);
-          transition: z-index 0s ease, transform 0s ease;
-        }
-
-        .ripple.ripple--light {
           z-index: 1;
           transition: 0.6s ease;
           transform: scale(4.8);
         }
-      }
 
-      .toggle {
-        width: 16.5px;
-        height: 16.5px;
-        position: absolute;
-        top: 4.75px;
-        border-radius: 50%;
-        z-index: 5;
+        .ripple.ripple--light {
+          z-index: 2;
+          transform: scale(1);
+          transition: z-index 0s ease, transform 0.6s ease;
+        }
 
-        &.toggle--dark {
+        &.btn--checked {
           background-color: var(--dark-gray);
-          left: 4.75px;
+          animation: changeColor 0.6s ease forwards;
+
+          @keyframes changeColor {
+            80% {
+              background-color: var(--dark-gray);
+            }
+            80.01% {
+              background-color: var(--white);
+            }
+            100% {
+              background-color: var(--white);
+            }
+          }
+
+          .ripple.ripple--dark {
+            z-index: 2;
+            transform: scale(1);
+            transition: z-index 0s ease, transform 0s ease;
+          }
+
+          .ripple.ripple--light {
+            z-index: 1;
+            transition: 0.6s ease;
+            transform: scale(4.8);
+          }
         }
 
-        &.toggle--light {
-          background-color: var(--white);
-          right: 4.75px;
+        .toggle {
+          width: 16.5px;
+          height: 16.5px;
+          position: absolute;
+          top: 4.75px;
+          border-radius: 50%;
+          z-index: 5;
+
+          &.toggle--dark {
+            background-color: var(--dark-gray);
+            left: 4.75px;
+          }
+
+          &.toggle--light {
+            background-color: var(--white);
+            right: 4.75px;
+          }
         }
-      }
 
-      .ripple {
-        width: 16.5px;
-        height: 16.5px;
-        position: absolute;
-        top: 4.75px;
-        border-radius: 50%;
+        .ripple {
+          width: 16.5px;
+          height: 16.5px;
+          position: absolute;
+          top: 4.75px;
+          border-radius: 50%;
 
-        &.ripple--dark {
-          background-color: var(--dark-gray);
-          left: 4.75px;
-        }
+          &.ripple--dark {
+            background-color: var(--dark-gray);
+            left: 4.75px;
+          }
 
-        &.ripple--light {
-          background-color: var(--white);
-          right: 4.75px;
+          &.ripple--light {
+            background-color: var(--white);
+            right: 4.75px;
+          }
         }
       }
     }
