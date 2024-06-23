@@ -1,13 +1,13 @@
 <header>
   <nav class="wrapper">
     <div class="left-side">
-      <a href="/" class="seller-logo" [innerHTML]="svgLogo"></a>
+      <a [routerLink]="'home'" class="seller-logo" [innerHTML]="svgLogo"></a>
       <div class="left-side__icons">
         <div class="whatsapp icon">
           <a
             href="https://api.whatsapp.com/send?phone={{
               seller.phone
-            }}&text=Olá, vi seu site e estou interessado em uma moto!"
+            }}&text={{seller.standard_message}}"
           >
             <svg
               height="682pt"
@@ -47,7 +47,7 @@
       </div>
     </div>
     <div class="right-side">
-      <a href="/" class="about-button">Sobre</a>
+      <a [routerLink]="'sobre'" class="about-button">Sobre</a>
       <button class="btn" #btn (click)="toggleClass()">
         <div class="ripple ripple--dark"></div>
         <div class="ripple ripple--light"></div>

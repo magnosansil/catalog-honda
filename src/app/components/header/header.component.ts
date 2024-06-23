@@ -2,11 +2,13 @@ import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { sellerInfo } from '../../data/seller-data';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { icons } from '../../data/icons';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
@@ -17,7 +19,9 @@ export class HeaderComponent implements AfterViewInit {
   whatsappLogo: SafeHtml;
   instagramLogo: SafeHtml;
 
-  constructor(private sanitizer: DomSanitizer) {
+  constructor(
+    private sanitizer: DomSanitizer
+  ) {
     this.svgLogo = this.sanitizer.bypassSecurityTrustHtml(sellerInfo.logo);
     this.whatsappLogo = this.sanitizer.bypassSecurityTrustHtml(
       icons.whatsappLogo
