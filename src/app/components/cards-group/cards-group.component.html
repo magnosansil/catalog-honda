@@ -1,1 +1,7 @@
-<p>cards-group works!</p>
+<div class="wrapper cards-group">
+  <app-card
+    *ngFor="let vehicle of vehicles"
+    [image]="vehicle.image"
+    [name]="vehicle.name"
+  ></app-card>
+</div>

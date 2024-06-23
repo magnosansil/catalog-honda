@@ -3,7 +3,6 @@ import { sellerInfo } from '../../data/seller-data';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { icons } from '../../data/icons';
 import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header',

@@ -63,7 +63,7 @@ export const motorcycles: Motorcycle[] = [
   },
   {
     id: 'pop110+10',
-    name: 'Pop 110i',
+    name: 'Pop 110i + 10',
     colors: ['branco', 'preto', 'vermelho'],
     images: [
       'https://www.honda.com.br/motos/sites/hda/files/2024-04/imagem-home-pop-110i-es-branco-ross-white-dianteira-direita.webp',
