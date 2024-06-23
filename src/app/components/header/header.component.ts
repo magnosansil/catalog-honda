@@ -35,20 +35,20 @@ export class HeaderComponent implements AfterViewInit {
   }
 
   toggleClass() {
-    const isDarkMode = document.body.classList.toggle('dark');
-    this.btn.nativeElement.classList.toggle('btn--checked', isDarkMode);
-    this.saveThemePreference(isDarkMode);
+    const isLightMode = document.body.classList.toggle('light');
+    this.btn.nativeElement.classList.toggle('btn--checked', isLightMode);
+    this.saveThemePreference(isLightMode);
   }
 
-  saveThemePreference(isDarkMode: boolean) {
-    localStorage.setItem('darkMode', JSON.stringify(isDarkMode));
+  saveThemePreference(isLightMode: boolean) {
+    localStorage.setItem('lightMode', JSON.stringify(isLightMode));
   }
 
   loadThemePreference() {
-    const storedTheme = localStorage.getItem('darkMode');
-    const isDarkMode = storedTheme ? JSON.parse(storedTheme) : false;
-    if (isDarkMode) {
-      document.body.classList.add('dark');
+    const storedTheme = localStorage.getItem('lightMode');
+    const isLightMode = storedTheme ? JSON.parse(storedTheme) : false;
+    if (isLightMode) {
+      document.body.classList.add('light');
       if (this.btn && this.btn.nativeElement) {
         this.btn.nativeElement.classList.add('btn--checked');
       }
