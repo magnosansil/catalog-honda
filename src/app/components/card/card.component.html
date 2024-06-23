@@ -1,8 +1,28 @@
 <div class="card">
+  <div clas="box"></div>
   <div class="vehicle-image">
-    <img [src]="image" [alt]="name">
+    <img [src]="image" [alt]="name" />
   </div>
   <div class="vehicle-name">
     <p>{{ name }}</p>
+  </div>
+
+  <div class="buttons-wrapper">
+    <button class="consortium_btn">
+      <span class="material-icons-outlined consortium-icon">payments</span>
+      <span class="label consortium-label">Planos de consórcio</span>
+    </button>
+    <a
+      href="https://api.whatsapp.com/send?phone={{ seller.phone }}&text={{ seller.standard_message }}"
+      class="talk-btn"
+      target="_blank"
+    >
+      <span class="material-icons-outlined contact-icon">contacts</span>
+      <span class="label contact-label">Fale Comigo</span>
+    </a>
+    <button class="about-btn">
+      <span class="material-icons-outlined info-icon">info</span>
+      <span class="label info-label">Sobre a moto</span>
+    </button>
   </div>
 </div>

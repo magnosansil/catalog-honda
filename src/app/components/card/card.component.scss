@@ -1,0 +1,121 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff59;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
+  border: 1px solid var(--white);
+  border-radius: 10px;
+  padding: 10px 20px 20px;
+  cursor: pointer;
+  transition: 1s;
+
+  * {
+    color: var(--primary-color);
+  }
+
+  .vehicle-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      transition: 0.6s;
+    }
+  }
+
+  &:hover .vehicle-image img {
+    width: 130%;
+  }
+
+  .vehicle-name {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-top: 20px;
+  }
+
+  .buttons-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+
+    button, a {
+      background-color: transparent;
+      text-decoration: none;
+      border: none;
+      text-align: center;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        border-radius: 0 20px 20px 0;
+        width: 120%;
+        height: 100%;
+        background-color: #0000001d;
+        z-index: 1;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease; 
+      }
+    
+      &:hover::before {
+        transform: translateX(0);
+      }
+
+      * {
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 10px;
+      }
+      .material-icons-outlined {
+        height: 100%;
+        width: 25%;
+      }
+      .label {
+        font-size: 12px;
+        font-weight: 600;
+        height: 100%;
+        width: 75%;
+      }
+      .consortium-icon {
+        background-color: #27ae60;
+      }
+      .consortium-label {
+        background-color: #27bd66;
+      }
+      .contact-icon {
+        background-color: #236d9d;
+      }
+      .contact-label {
+        background-color: #2391db;
+      }
+      .info-icon {
+        background-color: #dc002d;
+      }
+      .info-label {
+        background-color: #df3b5c;
+      }
+    }
+  }
+}
+
+@starting-style {
+  .card {
+    opacity: 0;
+    transform: translateX(-25%);
+  }
+}

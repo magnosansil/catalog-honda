@@ -1,6 +1,14 @@
 .cards-group {
   padding: 50px 10%;
   background-color: var(--wrapper-background);
-  margin-top: 91.83px;
   border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  box-shadow: #00000033 0px 18px 50px -10px;
+  
+  app-card {
+    flex-basis: 30%;
+  }
 }

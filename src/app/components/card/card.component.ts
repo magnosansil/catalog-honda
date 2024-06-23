@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-
+import { sellerInfo } from '../../data/seller-data';
 @Component({
   selector: 'app-card',
   standalone: true,
@@ -11,4 +11,6 @@ import { Component, Input } from '@angular/core';
 export class CardComponent {
   @Input() image: String = '';
   @Input() name: String = '';
+  
+  seller = sellerInfo;
 }
