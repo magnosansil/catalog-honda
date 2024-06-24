@@ -11,6 +11,8 @@ import { sellerInfo } from '../../data/seller-data';
 export class CardComponent {
   @Input() image: String = '';
   @Input() name: String = '';
+  @Input() value: Number = 0;
+  @Input() portion: String | undefined = '';
   
   seller = sellerInfo;
 }

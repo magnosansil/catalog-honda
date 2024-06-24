@@ -11,8 +11,14 @@ import { CommonModule } from '@angular/common';
   styleUrl: './cards-group.component.scss',
 })
 export class CardsGroupComponent {
-  vehicles = motorcycles.map((motorcycle) => ({
-    image: motorcycle.images[0],
-    name: motorcycle.name,
-  }));
+  
+  vehicles = motorcycles.map((motorcycle) => {
+    const lastKey = Object.keys(motorcycle.consortiumPlans).pop();
+    return {
+      image: motorcycle.images[0],
+      name: motorcycle.name,
+      value: motorcycle.consortiumPlans[lastKey as keyof typeof motorcycle.consortiumPlans],
+      portion: lastKey
+    };
+  });
 }
