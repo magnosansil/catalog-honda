@@ -11,6 +11,7 @@
   padding: 10px 20px 20px;
   cursor: pointer;
   transition: 1s;
+  overflow: hidden;
 
   * {
     color: var(--primary-color);
@@ -35,6 +36,7 @@
     font-size: 1.2em;
     font-weight: 500;
     margin-top: 20px;
+    text-align: center;
   }
 
   .buttons-wrapper {
