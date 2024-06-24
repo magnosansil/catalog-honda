@@ -302,7 +302,7 @@ export const motorcycles: Motorcycle[] = [
     name: 'XRE 300 ABS Sahara STD',
     colors: ['cinza metálico'],
     images: [
-      'https://www.honda.com.br/motos/sites/hda/files/2024-01/frente-e-lateral-direita-da-motocicleta-honda-sahara-300-standard.webp',
+      'https://teiacrm.com.br/storage/products/OqSUYNIxAwffqEYGG6Vut3qcL1yLtKEhsNtvLejB.webp',
     ],
     consortiumPlans: {
       '24x': 1502.59,
