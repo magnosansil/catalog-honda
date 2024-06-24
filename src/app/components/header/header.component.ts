@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit, HostListener } from '@angular/core';
 import { sellerInfo } from '../../data/seller-data';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { icons } from '../../data/icons';
@@ -13,25 +13,47 @@ import { RouterModule } from '@angular/router';
 })
 export class HeaderComponent implements AfterViewInit {
   @ViewChild('btn') btn!: ElementRef;
+  @ViewChild('header', { static: true }) header!: ElementRef;
   seller = sellerInfo;
   svgLogo: SafeHtml;
   whatsappLogo: SafeHtml;
   instagramLogo: SafeHtml;
+  previousScrollPosition = window.scrollY;
 
-  constructor(
-    private sanitizer: DomSanitizer
-  ) {
+  constructor(private sanitizer: DomSanitizer) {
     this.svgLogo = this.sanitizer.bypassSecurityTrustHtml(sellerInfo.logo);
-    this.whatsappLogo = this.sanitizer.bypassSecurityTrustHtml(
-      icons.whatsappLogo
-    );
-    this.instagramLogo = this.sanitizer.bypassSecurityTrustHtml(
-      icons.instagramLogo
-    );
+    this.whatsappLogo = this.sanitizer.bypassSecurityTrustHtml(icons.whatsappLogo);
+    this.instagramLogo = this.sanitizer.bypassSecurityTrustHtml(icons.instagramLogo);
   }
 
   ngAfterViewInit() {
     this.loadThemePreference();
+
+    this.header.nativeElement.addEventListener('mouseover', () => {
+      this.header.nativeElement.style.transform = 'translateX(0)';
+    });
+
+    this.header.nativeElement.addEventListener('click', () => {
+      this.header.nativeElement.style.transform = 'translateX(0)';
+    });
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const currentScrollPosition = window.scrollY;
+    const cardsGroup = document.querySelector('.cards-group');
+
+    if (cardsGroup) {
+      const cardsGroupPosition = cardsGroup.getBoundingClientRect().top + window.scrollY;
+
+      if (currentScrollPosition > this.previousScrollPosition && currentScrollPosition >= cardsGroupPosition) {
+        this.header.nativeElement.style.transform = 'translateY(-80%)';
+      } else {
+        this.header.nativeElement.style.transform = 'translateY(0)';
+      }
+    }
+
+    this.previousScrollPosition = currentScrollPosition;
   }
 
   toggleClass() {

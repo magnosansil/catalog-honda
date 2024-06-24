@@ -4,6 +4,7 @@ header {
   width: 100%;
   z-index: 1;
   box-shadow: 0 0 15px #00000059;
+  transition: transform 0.3s ease, transform 0.3s ease 0.3s;
 
   * {
     color: var(--primary-color);
