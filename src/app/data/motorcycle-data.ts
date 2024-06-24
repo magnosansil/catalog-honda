@@ -231,4 +231,202 @@ export const motorcycles: Motorcycle[] = [
       '80x': 312.84,
     },
   },
+  {
+    id: 'bros160',
+    name: 'NXR 160 BROS ESDD',
+    colors: ['branco', 'preto', 'vermelho'],
+    images: [
+      'https://www.honda.com.br/motos/sites/hda/files/2024-05/imagem-home-moto-honda-nxr-160-bros-esdd-branco-2024.webp',
+      'https://www.honda.com.br/motos/sites/hda/files/2024-05/imagem-home-moto-honda-nxr-160-bros-esdd-azul-2024.webp',
+      'https://www.honda.com.br/motos/sites/hda/files/2024-05/imagem-home-moto-honda-nxr-160-bros-esdd-vermelho-2024.webp',
+    ],
+    consortiumPlans: {
+      '24x': 1074.88,
+      '36x': 730.39,
+      '48x': 554.71,
+      '60x': 450.35,
+      '80x': 347.7,
+    },
+  },
+  {
+    id: 'twistercbs',
+    name: 'CB 300F TWISTER CBS',
+    colors: ['cinza metálico', 'vermelho'],
+    images: [
+      'https://www.honda.com.br/motos/sites/hda/files/2023-01/moto-honda-cb-300f-twister-cinza-metalico-cbs-2023-v1.webp',
+      'https://www.honda.com.br/motos/sites/hda/files/2023-01/moto-honda-cb-300f-twister-vermelha-cbs-2023-v1.webp',
+    ],
+    consortiumPlans: {
+      '24x': 1245.41,
+      '36x': 846.73,
+      '48x': 642.71,
+      '60x': 521.8,
+      '80x': 402.87,
+    },
+  },
+  {
+    id: 'twisterabs',
+    name: 'CB 300F TWISTER ABS',
+    colors: ['dourado metálico', 'vermelho'],
+    images: [
+      'https://www.honda.com.br/motos/sites/hda/files/2022-12/lateral-direita-moto-honda-cb-300f-twister-modelo-abs-cor-dourada.webp',
+      'https://www.honda.com.br/motos/sites/hda/files/2023-01/moto-honda-cb-300f-twister-vermelha-abs-2023-v1.webp',
+    ],
+    consortiumPlans: {
+      '24x': 1297.73,
+      '36x': 882.31,
+      '48x': 669.71,
+      '60x': 543.72,
+      '80x': 419.79,
+    },
+  },
+  {
+    id: 'xre190',
+    name: 'XRE 190',
+    colors: ['vermelho perolizado', 'cinza metálico', 'verde fosco'],
+    images: [
+      'https://www.honda.com.br/motos/sites/hda/files/2023-08/moto-honda-xre-190-vermelho-perolizado.webp',
+      'https://www.honda.com.br/motos/sites/hda/files/2023-08/moto-honda-xre-190-cinza-metalico.webp',
+      'https://www.honda.com.br/motos/sites/hda/files/2023-08/moto-honda-xre-190-verde-fosco.webp'
+    ],
+    consortiumPlans: {
+      '24x': 1158.25,
+      '36x': 787.47,
+      '48x': 597.73,
+      '60x': 485.28,
+      '80x': 374.67,
+    },
+  },
+  {
+    id: 'xre300std',
+    name: 'XRE 300 ABS Sahara STD',
+    colors: ['cinza metálico'],
+    images: [
+      'https://www.honda.com.br/motos/sites/hda/files/2024-01/frente-e-lateral-direita-da-motocicleta-honda-sahara-300-standard.webp',
+    ],
+    consortiumPlans: {
+      '24x': 1502.59,
+      '36x': 1021.59,
+      '48x': 775.43,
+      '60x': 629.55,
+      '80x': 486.06,
+    },
+  },
+  {
+    id: 'xre300adv',
+    name: 'XRE 300 ABS Sahara Adventure',
+    colors: ['bege metálico'],
+    images: [
+      'https://teiacrm.com.br/storage/products/65Z0LnqnsKNs9tEcsu3tbu34b8KkDPTA69qJ0OuG.webp',
+    ],
+    consortiumPlans: {
+      '24x': 1587.60,
+      '36x': 1079.38,
+      '48x': 819.30,
+      '60x': 665.16,
+      '80x': 513.56,
+    },
+  },
+  {
+    id: 'crf250f',
+    name: 'CRF 250F',
+    colors: ['vermelho'],
+    images: [
+      'https://www.honda.com.br/motos/sites/hda/files/2022-03/CRF-250F-vermelha.webp',
+    ],
+    consortiumPlans: {
+      '24x': 1170.63,
+      '36x': 795.89,
+      '48x': 604.12,
+      '60x': 490.46,
+      '80x': 378.68,
+    },
+  },
+  {
+    id: 'cb500f',
+    name: 'CB 500F',
+    colors: ['cinza fosco, vermelho, azul perolizado'],
+    images: [
+      'https://www.honda.com.br/motos/sites/hda/files/2023-09/moto-honda-cb-500f-cinza-fosco-mat-crow-gray-metallic%20.webp',
+      'https://www.honda.com.br/motos/sites/hda/files/2023-09/moto-honda-cb-500f-vermelho-victory-red.webp',
+      'https://www.honda.com.br/motos/sites/hda/files/2023-09/moto-honda-cb-500f-azul-perolizado.webp',
+    ],
+    consortiumPlans: {
+      '72x': 736.68,
+    },
+  },
+  {
+    id: 'cb500x',
+    name: 'CB 500X',
+    colors: ['verde, vermelho, azul perolizado'],
+    images: [
+      'https://www.honda.com.br/motos/sites/hda/files/2023-09/moto-honda-cb-500x-verde-fosco-mat-hunter-green-imagem-home_0.webp',
+      'https://www.honda.com.br/motos/sites/hda/files/2023-09/moto-honda-cb-500x-vermelho-victory-red-imagem-home_0.webp',
+      'https://www.honda.com.br/motos/sites/hda/files/2023-09/moto-honda-cb-500x-azul-perolizado-imagem-home_0.webp',
+    ],
+    consortiumPlans: {
+      '72x': 783.20,
+    },
+  },
+  {
+    id: 'nc750x',
+    name: 'NC 750X',
+    colors: ['vermelho, prata metálico'],
+    images: [
+      'https://www.honda.com.br/motos/sites/hda/files/2023-11/modulo-360--moto-honda-nc-750x-dct-vermelho-victory-red_0.webp',
+      'https://www.honda.com.br/motos/sites/hda/files/2023-11/modulo-360-moto-honda-nc-750x-mt-prata-met%C3%A1lico-ibiuna-silver-metallic%20.webp',
+    ],
+    consortiumPlans: {
+      '72x': 951.83,
+    },
+  },
+  {
+    id: 'cbr650r',
+    name: 'CBR 650R',
+    colors: ['laranja pérola, vermelho perolizado, cinza fosco'],
+    images: [
+      'https://www.honda.com.br/motos/sites/hda/files/2023-11/Desktop%20-%20%20CB650-Lateral1_laranja.png',
+      'https://www.honda.com.br/motos/sites/hda/files/2023-11/Desktop%20-%20CB650-Lateral1_vermelha.png',
+      'https://www.honda.com.br/motos/sites/hda/files/2023-11/Desktop%20-%20CB650-Lateral1_cinza.png',
+    ],
+    consortiumPlans: {
+      '72x': 999.75,
+    },
+  },
+  {
+    id: 'cbr1000r',
+    name: 'CBR 1000R',
+    colors: ['laranja pérola, vermelho perolizado, cinza fosco'],
+    images: [
+      'https://www.honda.com.br/motos/sites/hda/files/2023-09/modulo-360-moto-honda-cb-1000r-vermelho-met%C3%A1lico-bordeaux-red-metallic-5.webp',
+      'https://www.honda.com.br/motos/sites/hda/files/2023-09/modulo-360-moto-honda-cb-1000r-preto-fosco-mat-ballistic-black-metallic%20.webp',
+    ],
+    consortiumPlans: {
+      '72x': 994.40,
+    },
+  },
+  {
+    id: 'crf1100l',
+    name: 'CRF 1100L Africa Twin',
+    colors: ['azul metálico, preto fosco'],
+    images: [
+      'https://www.honda.com.br/motos/sites/hda/files/2023-10/modulo-360-moto-honda-africa-twin-mt-azul-met%C3%A1lico.webp',
+      'https://www.honda.com.br/motos/sites/hda/files/2023-10/modulo-360-moto-honda-africa-twin-mt-preto-fosco.webp',
+    ],
+    consortiumPlans: {
+      '72x': 1022.36,
+    },
+  },
+  {
+    id: 'trx420',
+    name: 'TRX 420 Fourtrax',
+    colors: ['vermelho, verde'],
+    images: [
+      'https://www.honda.com.br/motos/sites/hda/files/2022-08/TRX%20Vermelha%202023%20Cor%20Eixo.png',
+      'https://www.honda.com.br/motos/sites/hda/files/2022-08/TRX%20Verde%202023%20Cor%20Eixo.png',
+    ],
+    consortiumPlans: {
+      '72x': 865.52,
+    },
+  },
 ];
