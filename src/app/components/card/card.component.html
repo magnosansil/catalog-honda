@@ -13,7 +13,9 @@
       <span class="label consortium-label">Planos de consórcio</span>
     </button>
     <a
-      href="https://api.whatsapp.com/send?phone={{ seller.phone }}&text={{ seller.standard_message }}"
+      href="https://api.whatsapp.com/send?phone={{ seller.phone }}&text={{
+        seller.standard_message
+      }}"
       class="talk-btn"
       target="_blank"
     >
@@ -22,7 +24,9 @@
     </a>
     <button class="about-btn">
       <span class="material-icons-outlined info-icon">info</span>
-      <span class="label info-label">Sobre a moto</span>
+      <span class="label info-label">Sobre{{
+        name.includes("TRX") ? " o quadriciclo" : " a moto"
+      }}</span>
     </button>
   </div>
 </div>
