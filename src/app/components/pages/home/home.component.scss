@@ -4,11 +4,19 @@
   background-color: var(--background);
   padding: 50px 10%;
 
-  h1 {
+  .top-wrapper {
     margin-top: 60px;
     margin-bottom: 20px;
-    text-transform: uppercase;
-    color: var(--red);
-    font-size: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      text-transform: uppercase;
+      color: var(--red);
+      font-size: 2em;
+    }
   }
+
+
 }
