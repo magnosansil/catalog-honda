@@ -1,9 +1,16 @@
 <div class="wrapper cards-group">
-  <app-card
-    *ngFor="let vehicle of vehicles"
-    [image]="vehicle.image"
-    [name]="vehicle.name"
-    [value]="vehicle.value"
-    [portion]="vehicle.portion"
-  ></app-card>
+  <ng-container *ngIf="vehicles.length > 0; else noResults">
+    <app-card
+      *ngFor="let vehicle of filteredVehicles"
+      [image]="vehicle.image"
+      [name]="vehicle.name"
+      [value]="vehicle.value"
+      [portion]="vehicle.portion"
+    ></app-card>
+  </ng-container>
+  <ng-template #noResults>
+    <div class="no-results-message">
+      <p>Nenhum resultado encontrado para '{{ searchTerm }}'.</p>
+    </div>
+  </ng-template>
 </div>

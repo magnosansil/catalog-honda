@@ -2,6 +2,10 @@
   <button class="btn-search">
     <span class="material-icons">search</span>
   </button>
-  <input type="text" class="input-search" placeholder="Pesquisar...">
+  <input
+    type="text"
+    class="input-search"
+    placeholder="Pesquisar..."
+    (input)="onInput($event)"
+  />
 </div>
-

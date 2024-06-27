@@ -10,5 +10,9 @@ import { SearchBarComponent } from '../../search-bar/search-bar.component';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  searchTerm: string = '';
 
+  onSearch(term: string) {
+    this.searchTerm = term;
+  }
 }

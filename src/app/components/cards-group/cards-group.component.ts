@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { motorcycles } from '../../data/motorcycle-data';
 import { CardComponent } from '../card/card.component';
 import { CommonModule } from '@angular/common';
@@ -8,10 +8,11 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule, CardComponent],
   templateUrl: './cards-group.component.html',
-  styleUrl: './cards-group.component.scss',
+  styleUrls: ['./cards-group.component.scss'],
 })
-export class CardsGroupComponent {
-  
+export class CardsGroupComponent implements OnChanges {
+  @Input() searchTerm: string = '';
+
   vehicles = motorcycles.map((motorcycle) => {
     const lastKey = Object.keys(motorcycle.consortiumPlans).pop();
     return {
@@ -21,4 +22,19 @@ export class CardsGroupComponent {
       portion: lastKey
     };
   });
+
+  filteredVehicles = this.vehicles;
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['searchTerm']) {
+      this.filterVehicles();
+    }
+  }
+
+  filterVehicles() {
+    const term = this.searchTerm.toLowerCase();
+    this.filteredVehicles = this.vehicles.filter(vehicle => 
+      vehicle.name.toLowerCase().includes(term)
+    );
+  }
 }

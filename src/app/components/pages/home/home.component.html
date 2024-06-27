@@ -1,7 +1,7 @@
 <section class="home">
   <div class="wrapper top-wrapper">
     <h1>Escolha Sua Moto</h1>
-    <app-search-bar></app-search-bar>
+    <app-search-bar (search)="onSearch($event)"></app-search-bar>
   </div>
-  <app-cards-group></app-cards-group>
+  <app-cards-group [searchTerm]="searchTerm"></app-cards-group>
 </section>
