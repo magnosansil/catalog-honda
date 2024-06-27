@@ -1,5 +1,5 @@
 <div class="wrapper cards-group">
-  <ng-container *ngIf="vehicles.length > 0; else noResults">
+  <ng-container *ngIf="filteredVehicles.length > 0; else noResults">
     <app-card
       *ngFor="let vehicle of filteredVehicles"
       [image]="vehicle.image"
