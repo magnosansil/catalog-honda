@@ -7,6 +7,10 @@
   gap: 20px;
   flex-wrap: wrap;
   box-shadow: #00000033 0px 18px 50px -10px;
+
+  * {
+    color: var(--primary-color);
+  }
   
   app-card {
     flex-basis: 30%;
