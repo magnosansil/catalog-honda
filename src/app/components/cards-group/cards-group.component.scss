@@ -3,8 +3,8 @@
   background-color: var(--wrapper-background);
   border-radius: 10px;
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  column-gap: 5%;
+  row-gap: 20px;
   flex-wrap: wrap;
   box-shadow: #00000033 0px 18px 50px -10px;
 
