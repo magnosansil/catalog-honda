@@ -23,8 +23,5 @@ export class CardComponent {
   private preloadImage(url: string) {
     const img = new Image();
     img.src = url;
-    img.onload = () => {
-      console.log(`Imagem pré-carregada: ${url}`);
-    }
   }
 }
