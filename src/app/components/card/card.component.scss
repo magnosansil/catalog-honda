@@ -139,3 +139,30 @@
     transform: translateX(-25%);
   }
 }
+
+@media(max-width: 1024px) {
+  .card {
+    .vehicle-name {
+      font-size: 1em;
+    }
+
+    .buttons-wrapper {
+      button, a {
+        .label {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .card {
+    padding: 13px;
+
+    .vehicle-name, 
+    .buttons-wrapper {
+      margin-top: 13px;
+    } 
+  }
+}

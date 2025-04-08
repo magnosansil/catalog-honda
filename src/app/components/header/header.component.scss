@@ -1,8 +1,9 @@
 header {
   background-color: var(--background-header);
-  position: fixed;
+  position: sticky;
+  top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 3;
   box-shadow: 0 0 15px #00000059;
   transition: transform 0.3s ease, transform 0.3s ease 0.3s;
 
@@ -148,6 +149,18 @@ header {
             background-color: var(--white);
             right: 4.75px;
           }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 1024px) {
+  header {
+    nav {
+      .left-side {
+        .seller-logo {
+          max-width: 190px;
         }
       }
     }

@@ -60,16 +60,18 @@
   }
 
   h3 {
-    margin: 20px 0 15px;
+    font-size: 20px;
+    margin-top: 20px;
+    width: 100%;
   }
 
   h4 {
-    margin-top: 15px;
+    font-size: 18px
   }
 }
 
 .carousel-container {
-  margin: 20px 0;
+  margin-top: 20px;
   width: 100%;
   overflow: hidden;
   border-radius: 8px;
@@ -200,11 +202,17 @@
 }
 
 .specifications {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+
   .spec-group {
-    margin-bottom: 20px;
     background-color: var(--background);
     padding: 15px;
     border-radius: 4px;
+    width: 50%;
+    min-width: 345px;
+    flex: 1;
 
     p {
       margin: 8px 0;
@@ -235,6 +243,15 @@
     .valor {
       color: #2e7d32;
       font-weight: 500;
+    }
+  }
+}
+
+
+@media (max-width: 480px) {
+  .specifications {
+    .spec-group {
+      min-width: unset;
     }
   }
 }

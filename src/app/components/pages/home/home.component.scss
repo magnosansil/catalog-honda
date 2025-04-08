@@ -3,10 +3,9 @@
   height: 100%;
   min-height: 100vh;
   background-color: var(--background);
-  padding: 50px 10%;
+  padding: 20px 120px;
 
   .top-wrapper {
-    margin-top: 60px;
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
@@ -19,6 +18,40 @@
       font-size: 2em;
     }
   }
+}
 
+@media(max-width: 1760px) {
+  .home {
+    padding: 20px 50px;
+  }
+}
 
+@media(max-width: 1024px) {
+  .home {
+    .top-wrapper {
+      padding: 0;
+      h1 {
+        font-size: 1.7em;
+      }
+    }
+  }
+}
+@media(max-width: 768px) {
+  .home {
+    padding: 20px;
+
+    .top-wrapper {
+      position: relative;
+      
+      h1 {
+        position: absolute;
+      }
+
+      app-search-bar {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+      }
+    }
+  }
 }

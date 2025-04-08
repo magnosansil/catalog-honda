@@ -68,3 +68,25 @@
     }
   }
 }
+
+@media(max-width: 768px) {
+  .search-box {
+    margin-left: auto;
+    width: 100%;
+    .input-search {
+      margin-left: auto;
+      &:focus {
+        transition: all 0.3s ease-in-out;
+        background: var(--background);
+        width: 100%;
+      }
+    }
+    .btn-search {
+      &:focus ~ .input-search {
+        transition: all 0.3s ease-in-out;
+        background: var(--background);
+        width: 100%;
+      }
+    }
+  }
+}
