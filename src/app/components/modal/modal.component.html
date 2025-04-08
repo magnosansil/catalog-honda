@@ -1,0 +1,65 @@
+<div *ngIf="isVisible" class="modal" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    
+    <div *ngIf="motorcycle" class="motorcycle-info">
+      <div class="modal__header">
+        <h2>{{ motorcycle.name }}</h2>
+        <span class="close" (click)="closeModal()">&times;</span>
+      </div>
+      
+      <div *ngIf="contentType === 'sobre'" class="sobre-content">
+        <div class="carousel-container" *ngIf="motorcycle.images.length > 0">
+          <div *ngIf="motorcycle.images.length === 1" class="single-image">
+            <img [src]="motorcycle.images[0]" [alt]="motorcycle.name" class="carousel-image">
+          </div>
+          <div *ngIf="motorcycle.images.length > 1" class="splide" #splide>
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide" *ngFor="let image of motorcycle.images">
+                  <img [src]="image" [alt]="motorcycle.name" class="carousel-image">
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="specifications">
+          <h3>Especificações Técnicas</h3>
+          <div class="spec-group" *ngIf="motorcycle.specifications">
+            <h4>Motor</h4>
+            <p><strong>Tipo:</strong> {{ motorcycle.specifications.motor?.['type'] }}</p>
+            <p><strong>Cilindrada:</strong> {{ motorcycle.specifications.motor?.['cylinder_capacity'] }}cc</p>
+            <p><strong>Potência Máxima:</strong> {{ motorcycle.specifications.motor?.['maximum_power'] }}</p>
+            <p><strong>Torque Máximo:</strong> {{ motorcycle.specifications.motor?.['maximum_torque'] }}</p>
+            <p><strong>Sistema de Partida:</strong> {{ motorcycle.specifications.motor?.['starting_system'] }}</p>
+            <p><strong>Transmissão:</strong> {{ motorcycle.specifications.motor?.['transmission'] }} marchas</p>
+          </div>
+
+          <div class="spec-group" *ngIf="motorcycle.specifications">
+            <h4>Dimensões</h4>
+            <p><strong>Comprimento:</strong> {{ motorcycle.specifications.dimensions?.['motorcycle_length'] }}mm</p>
+            <p><strong>Largura:</strong> {{ motorcycle.specifications.dimensions?.['motorcycle_width'] }}mm</p>
+            <p><strong>Altura:</strong> {{ motorcycle.specifications.dimensions?.['motorcycle_height'] }}mm</p>
+            <p><strong>Peso Seco:</strong> {{ motorcycle.specifications.dimensions?.['dry_weight'] }}kg</p>
+          </div>
+
+          <div class="spec-group" *ngIf="motorcycle.specifications">
+            <h4>Capacidades</h4>
+            <p><strong>Tanque de Combustível:</strong> {{ motorcycle.specifications.capacities?.['fuel_tank'] }}L</p>
+            <p><strong>Óleo do Motor:</strong> {{ motorcycle.specifications.capacities?.['motor_oil'] }}L</p>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="contentType === 'planos'" class="planos-content">
+        <h3>Planos de Consórcio</h3>
+        <div class="consortium-plans">
+          <div *ngFor="let plan of getConsortiumPlans()" class="plan-item">
+            <span class="parcelas">{{ plan.parcelas }}</span>
+            <span class="valor">R$ {{ plan.valor | number:'1.2-2' }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

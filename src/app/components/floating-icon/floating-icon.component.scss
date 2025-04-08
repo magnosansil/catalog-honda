@@ -11,7 +11,7 @@
   z-index: 1000;
 
   &:hover svg {
-    width: 110%;
+    transform: scale(1.1);
   }
 
   svg {

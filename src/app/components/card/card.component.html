@@ -10,25 +10,37 @@
   </div>
 
   <div class="buttons-wrapper">
-    <button class="consortium_btn">
+    <button class="consortium_btn" (click)="openModal('consortium')">
       <span class="material-icons-outlined consortium-icon">payments</span>
       <span class="label consortium-label">Planos de consórcio</span>
     </button>
     <a
-      href="https://api.whatsapp.com/send?phone={{ seller.phone }}&text={{
-        seller.standard_message
-      }}"
+      href="https://api.whatsapp.com/send?phone={{ seller.phone }}&text={{ seller.standard_message }}"
       class="talk-btn"
       target="_blank"
     >
       <span class="material-icons-outlined contact-icon">contacts</span>
       <span class="label contact-label">Fale Comigo</span>
     </a>
-    <button class="about-btn">
+    <button class="about-btn" (click)="openModal('about')">
       <span class="material-icons-outlined info-icon">info</span>
-      <span class="label info-label">Sobre{{
-        name.includes("TRX") ? " o quadriciclo" : " a moto"
-      }}</span>
+      <span class="label info-label">Sobre{{ name.includes("TRX") ? " o quadriciclo" : " a moto" }}</span>
     </button>
   </div>
 </div>
+
+<app-modal 
+  *ngIf="isConsortiumModalVisible" 
+  [isVisible]="isConsortiumModalVisible" 
+  [motorcycle]="motorcycleData"
+  contentType="planos"
+  (close)="closeModal()">
+</app-modal>
+
+<app-modal 
+  *ngIf="isAboutModalVisible" 
+  [isVisible]="isAboutModalVisible" 
+  [motorcycle]="motorcycleData"
+  contentType="sobre"
+  (close)="closeModal()">
+</app-modal>

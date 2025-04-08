@@ -1,17 +1,23 @@
 :root {
   --primary-color: #f2f2f2;
-  --background-header: #1a1a1a;
+  --secondary-color: #eee;
   --background: var(--dark-gray);
+  --background-header: #1a1a1a;
   --wrapper-background: var(--background-header);
+  --secondary-background: #393939;
   --dark-gray: #333333;
   --white: #f5f5f5;
   --red: #fa343e;
+  --hover-color: #b4b4b4;
 }
 
 body.light {
+  --primary-color: #1a1a1a;
+  --secondary-color: #3b3b3b;
+  --background: #f5f5f5;
   --background-header: #e7e7e7;
   --wrapper-background: #9494948d;
-  --background: #f5f5f5;
-  --primary-color: #1a1a1a;
+  --secondary-background: #dcdcdc;
   --red: #8e050c;
+  --hover-color: #2e2e2e;
 }

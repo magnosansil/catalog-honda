@@ -1,0 +1,240 @@
+@import "@splidejs/splide/dist/css/splide.min.css";
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+} 
+.modal__header {
+  position: sticky;
+  top: 0;
+  background-color: var(--secondary-background);
+  z-index: 2;
+  padding: 20px 20px 10px;
+}
+
+.modal-content {
+  background-color: var(--secondary-background);
+  border-radius: 8px;
+  max-width: 1440px;
+  width: 90%;
+  height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  margin: 20px;
+}
+
+.sobre-content, 
+.planos-content {
+  padding: 0 20px 20px;
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--primary-color);
+  
+  &:hover {
+    color: var(--hover-color);
+  }
+}
+
+.motorcycle-info {
+  color: var(--primary-color);
+
+  h2 {
+    margin-top: 0;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+  }
+
+  h3 {
+    margin: 20px 0 15px;
+  }
+
+  h4 {
+    margin-top: 15px;
+  }
+}
+
+.carousel-container {
+  margin: 20px 0;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+
+  ::ng-deep .splide__sr {
+    display: none;
+  }
+
+  .single-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    padding: 20px;
+  }
+
+  .splide {
+    width: 100%;
+  }
+
+  .splide__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    padding: 20px 0;
+  }
+
+  .carousel-image {
+    width: auto;
+    width: 100%;
+    max-width: 500px;
+    object-fit: contain;
+  }
+
+  ::ng-deep .splide__arrows {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+
+  ::ng-deep .splide__arrow {
+    background: transparent;
+    width: 60px;
+    height: 60px;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;    
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 40px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.3));
+    }
+
+    &--prev {
+      left: 10px;
+      &::before {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 -960 960 960' width='24'%3E%3Cpath fill='currentColor' d='M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z'/%3E%3C/svg%3E");
+        color: var(--primary-color);
+      }
+    }
+
+    &--next {
+      right: 10px;
+      &::before {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 -960 960 960' width='24'%3E%3Cpath fill='currentColor' d='M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z'/%3E%3C/svg%3E");
+        color: var(--primary-color);
+      }
+    }
+
+    svg {
+      display: none;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  ::ng-deep .splide__pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  ::ng-deep .splide__pagination__page {
+    width: 8px;
+    height: 8px;
+    background: var(--primary-color);
+    opacity: 0.5;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+
+    &.is-active {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  }
+}
+
+.specifications {
+  .spec-group {
+    margin-bottom: 20px;
+    background-color: var(--background);
+    padding: 15px;
+    border-radius: 4px;
+
+    p {
+      margin: 8px 0;
+      color: var(--primary-color);
+    }
+  }
+}
+
+.consortium-plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+
+  .plan-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .parcelas {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .valor {
+      color: #2e7d32;
+      font-weight: 500;
+    }
+  }
+}
