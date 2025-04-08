@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*).js",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/javascript"
+        }
+      ]
+    },
+    {
+      "source": "/(.*).woff2",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "font/woff2"
+        }
+      ]
+    },
+    {
+      "source": "/(.*).ttf",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "font/ttf"
+        }
+      ]
+    },
+    {
+      "source": "/(.*).otf",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "font/otf"
+        }
+      ]
+    }
+  ]
+}
