@@ -3,17 +3,19 @@ import { sellerInfo } from '../../data/seller-data';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { icons } from '../../data/icons';
 import { RouterModule } from '@angular/router';
+import { MobileMenuComponent } from '../mobile-menu/mobile-menu.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, MobileMenuComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent implements AfterViewInit {
   @ViewChild('btn') btn!: ElementRef;
   @ViewChild('header', { static: true }) header!: ElementRef;
+  @ViewChild('mobileMenu') mobileMenu!: MobileMenuComponent;
   seller = sellerInfo;
   svgLogo: SafeHtml;
   whatsappLogo: SafeHtml;
@@ -75,5 +77,9 @@ export class HeaderComponent implements AfterViewInit {
         this.btn.nativeElement.classList.add('btn--checked');
       }
     }
+  }
+
+  toggleMobileMenu() {
+    this.mobileMenu.toggleMenu();
   }
 }

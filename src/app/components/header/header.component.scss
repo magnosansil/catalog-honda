@@ -3,7 +3,7 @@ header {
   position: sticky;
   top: 0;
   width: 100%;
-  z-index: 3;
+  z-index: 5;
   box-shadow: 0 0 15px #00000059;
   transition: transform 0.3s ease, transform 0.3s ease 0.3s;
 
@@ -16,6 +16,40 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .hamburguer-icon {
+      display: none;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      width: 30px;
+      height: 21px;
+      position: relative;
+      margin-left: 15px;
+
+      span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: var(--primary-color);
+        position: absolute;
+        left: 0;
+        transition: all 0.3s ease;
+
+        &:nth-child(1) {
+          top: 0;
+        }
+
+        &:nth-child(2) {
+          top: 9px;
+        }
+
+        &:nth-child(3) {
+          top: 18px;
+        }
+      }
+    }
 
     .left-side {
       display: flex;
@@ -155,6 +189,13 @@ header {
   }
 }
 
+app-mobile-menu {
+  display: none;
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+}
+
 @media(max-width: 1024px) {
   header {
     nav {
@@ -164,5 +205,23 @@ header {
         }
       }
     }
+  }
+}
+
+@media(max-width: 768px) {
+  .icon {
+    display: none;
+  }
+
+  .right-side a {
+    display: none;
+  }
+
+  .hamburguer-icon {
+    display: block !important;
+  }
+
+  app-mobile-menu {
+    display: block;
   }
 }
