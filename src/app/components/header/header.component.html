@@ -55,6 +55,16 @@
         <div class="toggle toggle--dark"></div>
         <div class="toggle toggle--light"></div>
       </button>
+
+      <button class="hamburguer-icon" #hamburguerIcon (click)="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </nav>
 </header>
+
+<app-mobile-menu #mobileMenu></app-mobile-menu>
+
+

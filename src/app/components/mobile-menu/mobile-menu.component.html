@@ -1,0 +1,48 @@
+<div class="mobile-menu__component" [class.active]="isActive">
+  <div class="mobile-menu">
+    <div class="whatsapp icon">
+      <a
+        href="https://api.whatsapp.com/send?phone={{
+          seller.phone
+        }}&text={{seller.standard_message}}"
+      >
+        <svg
+          height="682pt"
+          viewBox="-23 -21 682 682.66669"
+          width="682pt"
+          xmlns="http://www.w3.org/2000/svg"
+          id="fi_1384023"
+          [innerHTML]="whatsappLogo"
+        ></svg>
+  
+        <div class="contact">
+          <span class="phone-number">
+            {{ seller.formattedPhone }}
+          </span>
+        </div>
+      </a>
+    </div>
+  
+    <div class="instagram icon">
+      <a [href]="seller.instagramLink">
+        <svg
+          height="512pt"
+          viewBox="0 0 512 512"
+          width="512pt"
+          xmlns="http://www.w3.org/2000/svg"
+          id="fi_1419647"
+          [innerHTML]="instagramLogo"
+        ></svg>
+  
+        <div class="contact">
+          <span class="instagram-nick">
+            {{ seller.instagram }}
+          </span>
+        </div>
+      </a>
+    </div>
+    <a [routerLink]="'sobre'" class="about-button">Sobre</a>
+  </div>
+  
+  <div class="overlay"></div>
+</div>
