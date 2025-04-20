@@ -12,6 +12,8 @@
   padding: 20px 20px;
   transition: 1s;
   height: 100%;
+  min-width: 180px;
+  max-width: 422px;
 
   * {
     color: var(--primary-color);

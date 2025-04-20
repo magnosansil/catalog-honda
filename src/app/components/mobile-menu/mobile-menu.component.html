@@ -41,8 +41,8 @@
         </div>
       </a>
     </div>
-    <a [routerLink]="'sobre'" class="about-button">Sobre</a>
+    <a [routerLink]="'sobre'" class="about-button" (click)="toggleMenu()">Sobre</a>
   </div>
   
-  <div class="overlay"></div>
+  <div class="overlay" (click)="toggleMenu()"></div>
 </div>

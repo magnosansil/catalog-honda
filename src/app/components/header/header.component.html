@@ -1,7 +1,7 @@
 <header #header>
   <nav class="wrapper">
     <div class="left-side">
-      <a [routerLink]="'/'" class="seller-logo" [innerHTML]="svgLogo"></a>
+      <a [routerLink]="'/'" class="seller-logo" [innerHTML]="svgLogo" (click)="closeMobileMenu()"></a>
       <div class="left-side__icons">
         <div class="whatsapp icon">
           <a
@@ -65,6 +65,6 @@
   </nav>
 </header>
 
-<app-mobile-menu #mobileMenu></app-mobile-menu>
+<app-mobile-menu #mobileMenu (menuStateChanged)="onMenuStateChanged($event)"></app-mobile-menu>
 
 

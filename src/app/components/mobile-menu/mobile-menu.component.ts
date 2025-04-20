@@ -1,9 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { sellerInfo } from '../../data/seller-data';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { icons } from '../../data/icons';
 import { RouterModule } from '@angular/router';
-
 
 @Component({
   selector: 'app-mobile-menu',
@@ -12,8 +11,8 @@ import { RouterModule } from '@angular/router';
   templateUrl: './mobile-menu.component.html',
   styleUrl: './mobile-menu.component.scss'
 })
-
 export class MobileMenuComponent {
+  @Output() menuStateChanged = new EventEmitter<boolean>();
   seller = sellerInfo;
   whatsappLogo: SafeHtml;
   instagramLogo: SafeHtml;
@@ -27,6 +26,7 @@ export class MobileMenuComponent {
   toggleMenu() {
     this.isActive = !this.isActive;
     this.toggleScrollLock();
+    this.menuStateChanged.emit(this.isActive);
   }
 
   private toggleScrollLock() {

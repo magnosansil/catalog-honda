@@ -82,6 +82,17 @@ export class HeaderComponent implements AfterViewInit {
 
   toggleMobileMenu() {
     this.mobileMenu.toggleMenu();
-    this.hamburguerIcon.nativeElement.classList.toggle('active');
+    this.hamburguerIcon.nativeElement.classList.toggle('active', this.mobileMenu.isActive);
+  }
+
+  closeMobileMenu() {
+    if (this.mobileMenu.isActive) {
+      this.mobileMenu.toggleMenu();
+      this.hamburguerIcon.nativeElement.classList.remove('active');
+    }
+  }
+
+  onMenuStateChanged(isActive: boolean) {
+    this.hamburguerIcon.nativeElement.classList.toggle('active', isActive);
   }
 }
