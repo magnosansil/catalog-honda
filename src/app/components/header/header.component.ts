@@ -16,6 +16,7 @@ export class HeaderComponent implements AfterViewInit {
   @ViewChild('btn') btn!: ElementRef;
   @ViewChild('header', { static: true }) header!: ElementRef;
   @ViewChild('mobileMenu') mobileMenu!: MobileMenuComponent;
+  @ViewChild('hamburguerIcon') hamburguerIcon!: ElementRef;
   seller = sellerInfo;
   svgLogo: SafeHtml;
   whatsappLogo: SafeHtml;
@@ -81,5 +82,6 @@ export class HeaderComponent implements AfterViewInit {
 
   toggleMobileMenu() {
     this.mobileMenu.toggleMenu();
+    this.hamburguerIcon.nativeElement.classList.toggle('active');
   }
 }
