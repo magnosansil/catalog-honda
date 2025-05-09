@@ -1,1 +1,19 @@
-<p>about works!</p>
+<div class="about-seller wrapper">
+  <div class="about-seller__container">
+    <h1 class="about-seller__title">Sobre {{ firstName }}</h1>
+    <div class="about-seller__info">
+      <div class="about-seller__left">
+        <div class="about-seller__picture">
+          <img src="{{ seller.profile_picture }}" alt="{{ seller.name }}">
+        </div>
+        <div class="about-seller__name">
+          <h2>{{ seller.name }}</h2>
+        </div>
+      </div>
+      <div class="about-seller__right">
+        <p [innerHTML]="description" class="about-seller__description">
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

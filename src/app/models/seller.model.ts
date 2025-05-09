@@ -8,4 +8,5 @@ export interface SellerInfo {
   concessionaire_logo?: string;
   profile_picture?: string;
   standard_message: string;
+  description: string;
 }
